@@ -1,2 +1,2 @@
 
-const API_KEY = '';
+const API_KEY = 'YOUR GOOGLE MAPS API KEY';
