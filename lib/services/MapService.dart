@@ -15,7 +15,7 @@ class MapService {
   Stream<List<LatLng>> getTrajet(LatLng origin, LatLng destination) {
     return Stream<http.Response>.fromFuture(
         http
-            .get(ApiRoutes.directionRoute(origin.format(), destination.format()))
+            .get(ApiRoutes.directionRoute(origin.requestParamsFormat(), destination.requestParamsFormat()))
     ).map((response){
 
       var decoded = jsonDecode(response.body);
